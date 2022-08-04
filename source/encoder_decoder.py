@@ -321,9 +321,9 @@ def main():
         if os.path.exists(eval_results_file):
             os.remove(eval_results_file)
 
-    args.device = "1"
+    #args.device = "cpu"
     tokenizer, model = init_model(
-        args.model_name_or_path, device=args.device, do_lower_case=args.do_lower_case, args = args
+        args.model_name_or_path, device=device, do_lower_case=args.do_lower_case, args = args
     )
 
     args.pad_token_id = tokenizer.pad_token_id
